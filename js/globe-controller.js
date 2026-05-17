@@ -193,10 +193,37 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(() => {
                     myGlobe.width(viz.clientWidth).height(viz.clientHeight);
                     updateGlobeTheme();
+                    updateGlobeData();
                 }, 500);
             } else {
                 updateGlobeData();
             }
         });
     });
+
+    // Auto-show globe on page load with The Serf (84%) as default
+    function initGlobeDefault() {
+        container.classList.add('has-globe');
+        const wrapper = document.querySelector('.content-wrapper');
+        if (wrapper) wrapper.classList.add('theater-mode');
+
+        currentRankData = { num: 84, isTop3: false, rankName: "The Serf" };
+
+        myGlobe = Globe()(viz)
+            .backgroundColor('rgba(0,0,0,0)')
+            .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-dark.jpg')
+            .pointAltitude(0.015)
+            .pointRadius('size');
+
+        myGlobe.controls().autoRotate = true;
+        myGlobe.controls().autoRotateSpeed = 2.0;
+
+        setTimeout(() => {
+            myGlobe.width(viz.clientWidth).height(viz.clientHeight);
+            updateGlobeTheme();
+            updateGlobeData();
+        }, 500);
+    }
+
+    initGlobeDefault();
 });

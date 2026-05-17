@@ -77,7 +77,7 @@ title: LL Cool M | Rank Yourself
         </div>
 
         <div id="globe-container-wrap">
-            <div style="position: relative; width: 350px; height: 350px; margin: auto;">
+            <div style="position: relative; width: 455px; height: 455px; margin: auto;">
                 <button id="close-globe">X</button>
                 <div id="globe-viz" style="width: 100%; height: 100%; border-radius: 50%; overflow: hidden; transform: rotateZ(23.5deg);"></div>
             </div>
