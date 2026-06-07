@@ -15,11 +15,5 @@ permalink: /blog/:title/
 
 # Exclude files from the Jekyll build
 exclude:
-  - README.md
-  - LICENSE
-  - node_modules
-  - .git
-  - .github
-  - homepage_preview.png
-  - .playwright-mcp
   - static_archive
+  - Smithy
