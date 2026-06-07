@@ -16,4 +16,4 @@ permalink: /blog/:title/
 # Exclude files from the Jekyll build
 exclude:
   - static_archive
-  - Smithy
+  - smithy
